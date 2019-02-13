@@ -1,5 +1,4 @@
 import abc
-import pickle
 import time
 from collections import OrderedDict
 
@@ -73,7 +72,7 @@ class RLAlgorithm(metaclass=abc.ABCMeta):
         if collection_mode == 'batch':
             assert num_updates_per_epoch is not None
 
-        self.training_env = training_env or pickle.loads(pickle.dumps(env))
+        self.training_env = training_env or env
         self.exploration_policy = exploration_policy
         self.num_epochs = num_epochs
         self.num_env_steps_per_epoch = num_steps_per_epoch

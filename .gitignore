@@ -1,5 +1,7 @@
 */*/mjkey.txt
+/data
 **/.DS_STORE
+*.egg-info
 **/*.pyc
 **/*.swp
 rlkit/launchers/config.py
